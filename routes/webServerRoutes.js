@@ -4,7 +4,10 @@ const webServerController = require('./../controllers/webServerController');
 const router = express.Router();
 
 router
-    .route('/')
-    .get(webServerController.getAllResponse);
+    .route('/process')
+    .get(webServerController.handleRequest)
+    .post(webServerController.handleRequest)
+    .put(webServerController.handleRequest)
+    .delete(webServerController.handleRequest);
 
 module.exports = router;

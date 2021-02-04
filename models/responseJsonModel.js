@@ -9,21 +9,21 @@ const responseJsonSchema = new mongoose.Schema({
     type: String,
     required: [true, 'method is required'],
     enum: {
-      values: ['get', 'post', 'put', 'delete'],
+      values: ['GET', 'POST', 'PUT', 'DELETE'],
       message: 'Method is either: get, post, put, delete'
     }
   },
   headers: {
-    type: String
+    type: mongoose.Schema.Types.Mixed
   },
   path: {
     type: String
   },
   query: {
-    type: String
+    type: mongoose.Schema.Types.Mixed
   },
   body: {
-    type: String
+    type: mongoose.Schema.Types.Mixed
   },
   duration: {
     type: Number,
