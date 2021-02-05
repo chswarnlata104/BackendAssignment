@@ -9,5 +9,9 @@ router
     .post(webServerController.handleRequest)
     .put(webServerController.handleRequest)
     .delete(webServerController.handleRequest);
+  
+router
+    .route('/stats')
+    .get(webServerController.getStats);
 
 module.exports = router;
