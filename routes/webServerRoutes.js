@@ -14,4 +14,8 @@ router
     .route('/stats')
     .get(webServerController.getStats);
 
+router
+    .route('/response-json')
+    .get(webServerController.getAllResponseJSON)
+
 module.exports = router;
